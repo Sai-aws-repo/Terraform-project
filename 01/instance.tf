@@ -1,7 +1,11 @@
-resource "aws_instance" "example" {
-
+resource "aws_instance" "dev" {
     ami = "${lookup(var.AMIS, var.AWS_REGION)}"
     instance_type = var.instancetype
-    count = 2
-  
-}
+    count = var.istest == true ? 1 : 0 
+  }
+
+resource "aws_instance" "prod" {
+    ami = "${lookup(var.AMIS, var.AWS_REGION)}"
+    instance_type = var.instancetype
+    count = var.istest == false ? 1 : 0 
+  }
