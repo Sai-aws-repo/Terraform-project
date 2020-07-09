@@ -6,6 +6,8 @@ variable "AWS_REGION" {
   default = "us-east-2"
 }
 
+variable "istest" {}
+
 variable "instancetype" {
   default = "t2.micro"
 }
