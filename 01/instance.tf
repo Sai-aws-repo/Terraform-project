@@ -1,5 +1,5 @@
 resource "aws_instance" "dev" {
-    ami = "${lookup(var.AMIS, var.AWS_REGION)}"
+    ami = lookup(var.AMIS, var.AWS_REGION)
     instance_type = var.instancetype
     count = var.istest == true ? 1 : 0 
   }
