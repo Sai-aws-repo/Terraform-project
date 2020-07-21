@@ -1,2 +1,2 @@
 # Terraform-project
-Practice terraform
+Infrastructure as Code using Terraform
